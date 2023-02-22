@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
 * This program asks the user for a length of logs
-* and calculates the amount of logs a truck can 
+* and calculates the amount of logs a truck can
 * carry based on the length.
 *
 * @author  Logan S
@@ -25,16 +25,16 @@ public final class Logging {
     /**
      * This is the main method.
      *
-     * @param args
+     * @param args Unused.
      */
     public static void main(String[] args) {
 
-        // Constant
-        final double LOG_WEIGH = 20;
-        final double MAX_MASS = 1100;
-        final double SIZE_ONE = 0.25;
-        final double SIZE_TWO = 0.5;
-        final double SIZE_THREE = 1;
+        // Constants
+        final double logWeight = 20.0;
+        final double maxMass = 1100.0;
+        final double sizeOne = 0.25;
+        final double sizeTwo = 0.5;
+        final double sizeThree = 1.0;
 
         // Using Scanner for Getting Input for User
         final Scanner scanner = new Scanner(System.in);
@@ -48,11 +48,11 @@ public final class Logging {
             final double lengthD = Double.parseDouble(length);
 
             // If input is valid calculates # of logs.
-            if (lengthD == SIZE_ONE || lengthD == SIZE_TWO
-                     || lengthD == SIZE_THREE) {
+            if (lengthD == sizeOne || lengthD == sizeTwo
+                     || lengthD == sizeThree) {
                 // Calculate # of logs
-                final double numLogs = LOG_WEIGH * lengthD;
-                final double logsFinal = MAX_MASS / numLogs;
+                final double numLogs = logWeight * lengthD;
+                final double logsFinal = maxMass / numLogs;
 
                 // Display the answer to user
                 System.out.print("The truck can take, " + logsFinal);
